@@ -8,7 +8,7 @@ import {
   House,
   User
 } from '@phosphor-icons/react';
-import twitterLogo from '../assets/twitter-logo.svg';
+import twitterLogo from '../../assets/twitter-logo.svg';
 import './Sidebar.css';
 
 export function Sidebar() {

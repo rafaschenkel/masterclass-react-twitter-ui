@@ -1,6 +1,7 @@
-import { Sparkle } from '@phosphor-icons/react';
-import { Tweet } from './components/Tweet';
-import { Sidebar } from './components/Sidebar';
+import { Sidebar } from './components/Sidebar/Sidebar';
+import { Header } from './components/Header/Header';
+import { Separator } from './components/Separator/Separator';
+import { Tweet } from './components/Tweet/Tweet';
 
 function App() {
   return (
@@ -8,10 +9,7 @@ function App() {
       <Sidebar />
       <div className="content">
         <main className="timeline">
-          <div className="timeline-header">
-            <span>Home</span>
-            <Sparkle size={20} />
-          </div>
+          <Header title="Home" />
           <form className="new-tweet-form">
             <label htmlFor="tweet">
               <img src="https://github.com/rafaschenkel.png" alt="Rafael.png" />
@@ -20,7 +18,7 @@ function App() {
             <button type="submit">Tweet</button>
           </form>
 
-          <div className="separator" />
+          <Separator />
 
           <div className="tweets">
             <Tweet />
