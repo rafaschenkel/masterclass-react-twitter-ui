@@ -10,44 +10,45 @@ import {
 } from '@phosphor-icons/react';
 import twitterLogo from '../../assets/twitter-logo.svg';
 import './Sidebar.css';
+import { NavLink } from 'react-router-dom';
 
 export function Sidebar() {
   return (
     <aside className="sidebar">
       <img className="logo" src={twitterLogo} alt="Logo Twitter" />
       <nav className="sidebar-navigation">
-        <a href="" className="active">
+        <NavLink to="/">
           <House weight="fill" size={30} />
           Home
-        </a>
-        <a href="">
+        </NavLink>
+        <NavLink to="/explorer">
           <Hash size={30} />
           Explorer
-        </a>
-        <a href="">
+        </NavLink>
+        <NavLink to="/notifications">
           <Bell size={30} />
           Notifications
-        </a>
-        <a href="">
+        </NavLink>
+        <NavLink to="/messages">
           <Envelope size={30} />
           Messages
-        </a>
-        <a href="">
+        </NavLink>
+        <NavLink to="/bookmarks">
           <BookmarkSimple size={30} />
           Bookmarks
-        </a>
-        <a href="">
+        </NavLink>
+        <NavLink to="/lists">
           <FileText size={30} />
           Lists
-        </a>
-        <a href="">
+        </NavLink>
+        <NavLink to="/profile">
           <User size={30} />
           Profile
-        </a>
-        <a href="">
+        </NavLink>
+        <NavLink to="/more">
           <DotsThreeCircle size={30} />
           More
-        </a>
+        </NavLink>
       </nav>
       <button className="new-tweet">Tweet</button>
     </aside>
