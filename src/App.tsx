@@ -6,55 +6,78 @@ import {
   BookmarkSimple,
   FileText,
   User,
-  DotsThreeCircle
+  DotsThreeCircle,
+  Sparkle
 } from '@phosphor-icons/react';
 
 import twitterLogo from '../public/twitter-logo.svg';
+import { Tweet } from './components/Tweet';
 
 function App() {
   return (
     <div className="layout">
-      <aside className="sideBar">
-        <header className="sideBar-header">
-          <img src={twitterLogo} alt="" />
-        </header>
-        <div className="sideBar-links">
-          <a href="" className="sideBar-link active">
+      <aside className="sidebar">
+        <img className="logo" src={twitterLogo} alt="Logo Twitter" />
+        <nav className="sidebar-navigation">
+          <a href="" className="active">
             <House weight="fill" size={30} />
             Home
           </a>
-          <a href="" className="sideBar-link">
+          <a href="">
             <Hash size={30} />
             Explorer
           </a>
-          <a href="" className="sideBar-link">
+          <a href="">
             <Bell size={30} />
             Notifications
           </a>
-          <a href="" className="sideBar-link">
+          <a href="">
             <Envelope size={30} />
             Messages
           </a>
-          <a href="" className="sideBar-link">
+          <a href="">
             <BookmarkSimple size={30} />
             Bookmarks
           </a>
-          <a href="" className="sideBar-link">
+          <a href="">
             <FileText size={30} />
             Lists
           </a>
-          <a href="" className="sideBar-link">
+          <a href="">
             <User size={30} />
             Profile
           </a>
-          <a href="" className="sideBar-link">
+          <a href="">
             <DotsThreeCircle size={30} />
             More
           </a>
-        </div>
-        <button>Tweet</button>
+        </nav>
+        <button className="new-tweet">Tweet</button>
       </aside>
-      <div className="content">k</div>
+      <div className="content">
+        <main className="timeline">
+          <div className="timeline-header">
+            <span>Home</span>
+            <Sparkle size={20} />
+          </div>
+          <form className="new-tweet-form">
+            <label htmlFor="tweet">
+              <img src="https://github.com/rafaschenkel.png" alt="Rafael.png" />
+              <textarea id="tweet" placeholder="What's happening?" />
+            </label>
+            <button type="submit">Tweet</button>
+          </form>
+
+          <div className="separator" />
+
+          <div className="tweets">
+            <Tweet />
+            <Tweet />
+            <Tweet />
+            <Tweet />
+          </div>
+        </main>
+      </div>
     </div>
   );
 }
