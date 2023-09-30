@@ -6,6 +6,7 @@ import {
   FileText,
   Hash,
   House,
+  Pencil,
   User
 } from '@phosphor-icons/react';
 import twitterLogo from '../../assets/twitter-logo.svg';
@@ -19,38 +20,41 @@ export function Sidebar() {
       <nav className="sidebar-navigation">
         <NavLink to="/">
           <House weight="fill" size={30} />
-          Home
+          <span>Home</span>
         </NavLink>
         <NavLink to="/explorer">
           <Hash size={30} />
-          Explorer
+          <span>Explorer</span>
         </NavLink>
         <NavLink to="/notifications">
           <Bell size={30} />
-          Notifications
+          <span>Notifications</span>
         </NavLink>
         <NavLink to="/messages">
           <Envelope size={30} />
-          Messages
+          <span>Messages</span>
         </NavLink>
         <NavLink to="/bookmarks">
           <BookmarkSimple size={30} />
-          Bookmarks
+          <span>Bookmarks</span>
         </NavLink>
         <NavLink to="/lists">
           <FileText size={30} />
-          Lists
+          <span>Lists</span>
         </NavLink>
         <NavLink to="/profile">
           <User size={30} />
-          Profile
+          <span>Profile</span>
         </NavLink>
         <NavLink to="/more">
           <DotsThreeCircle size={30} />
-          More
+          <span>More</span>
         </NavLink>
       </nav>
-      <button className="new-tweet">Tweet</button>
+      <button className="new-tweet">
+        <Pencil size={30} />
+        <span>Tweet</span>
+      </button>
     </aside>
   );
 }
