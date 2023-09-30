@@ -49,3 +49,21 @@
 .answer-tweet-form button[type='submit']:hover {
   filter: brightness(0.9);
 }
+
+.answer-tweet-form button[type='submit'] svg {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .answer-tweet-form button[type='submit'] {
+    padding: 0.5rem;
+  }
+
+  .answer-tweet-form button[type='submit'] svg {
+    display: block;
+  }
+
+  .answer-tweet-form button[type='submit'] span {
+    display: none;
+  }
+}

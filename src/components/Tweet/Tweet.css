@@ -26,6 +26,7 @@
 
 .tweet-content p {
   line-height: 1.25;
+  word-break: break-all;
 }
 
 .tweet-content-header span {

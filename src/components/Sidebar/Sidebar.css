@@ -6,8 +6,9 @@
 }
 
 .sidebar .logo {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto;
 }
 
 .sidebar-navigation {
@@ -49,4 +50,35 @@
 
 .sidebar .new-tweet:hover {
   filter: brightness(0.9);
+}
+
+.sidebar .new-tweet svg {
+  display: none;
+}
+
+
+@media (max-width: 780px) {
+  .sidebar {
+    padding: .75rem 1rem;
+  }
+
+  .sidebar-navigation a span {
+    display: none;
+  }
+
+  .sidebar-navigation {
+    align-items: center;
+  }
+
+  .sidebar .new-tweet {
+    padding: .5rem;
+  }
+
+  .sidebar .new-tweet svg {
+    display: block;
+  }
+
+  .sidebar .new-tweet span {
+    display: none;
+  }
 }
